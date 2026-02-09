@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <!-- Hide Messenger Preview -->
+  <meta property="og:title" content=" ">
+  <meta property="og:description" content=" ">
+  <meta property="og:image" content="">
+  <meta name="twitter:card" content="summary">
+
+  <title>💖</title>
+
+  <style>
+    body {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #ffdde1;
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+    }
+    .card {
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+    button {
+      font-size: 20px;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      margin: 10px;
+      position: relative;
+    }
+    #yes {
+      background: #ff4d6d;
+      color: white;
+    }
+    #no {
+      background: #ccc;
+      color: black;
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>💘 Noreen, will you be my Valentine? 💘</h1>
+    <button id="yes" onclick="yes()">Yes 💖</button>
+    <button id="no">No 💔</button>
+  </div>
+
+  <script>
+    const noBtn = document.getElementById("no");
+
+    noBtn.addEventListener("mouseover", () => {
+      const x = Math.random() * (window.innerWidth - noBtn.offsetWidth);
+      const y = Math.random() * (window.innerHeight - noBtn.offsetHeight);
+      noBtn.style.left = x + "px";
+      noBtn.style.top = y + "px";
+    });
+
+    function yes() {
+      document.body.innerHTML =
+        "<h1 style='text-align:center;'>😏💖 Yay! I knew you’d say yes hahaha</h1>";
+    }
+  </script>
+
+</body>
+</html>
+
